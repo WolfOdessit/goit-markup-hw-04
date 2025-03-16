@@ -311,7 +311,7 @@ border: 1px solid #8e8f99;
 .team-icon {
     width: 40px;
     height: 40px;
-    fill: #F4F4FD;
+    fill: var(--icon-color, #f4f4fd);
     background-color: #4d5ae5;
     border-radius: 50%;
     overflow: visible;
@@ -322,20 +322,29 @@ border: 1px solid #8e8f99;
     width: 40px;
     height: 40px;
 }
-.team-social-container{
-  
 
+.team-link {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color, #4d5ae5);
+    border-radius: 50%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.team-item:hover{
-    background-color: #404BBF;
+
+.team-link:hover,
+.team-link:focus {
+    background-color: #404bbf;
 }
-.team-item:focus{background-color: #404BBF;}
 
 
 .team-social-list{
     display: flex;
     justify-content: center;
     gap: 24px;
+    padding-bottom: 32px;
 }
 
 /*Portfolio*/
@@ -361,11 +370,11 @@ border: 1px solid #8e8f99;
     
 }
 .portfolio-list {
-    width: calc((100% - 48px) / 3);
-    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
- 
-    
+    width: calc((100% - 48px) / 3);}
+.portfolio-list:hover{
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+  
 .p-portfolio{
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -376,27 +385,30 @@ border: 1px solid #8e8f99;
     gap: 24px;
     row-gap: 48px;
 }
-.portfolio-item{
-position: relative;
-overflow: hidden;
-width: 360px;
-height: 100%;
-transition: transform 250ms ease-in-out
+.portfolio-ul:hover{
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
-.overlay{
- position:absolute;
+
+.box-portfolio{
+    position: relative;
+    overflow: hidden;
+
+}
+.portfolio-hidden-text{
+position: absolute;
 top: 0;
-left: 0;
-width: 100%;
+font-size: 16px;
+line-height: 1,5;
+letter-spacing: 0.02em;
+color:#f4f4fd;
+padding: 40px 32px;
+background-color: #4d5ae5;
 height: 100%;
+width: 100%;
 transform: translateY(100%);
-transition: transform 250ms ease-in-out;
-background-color:#4D5AE5;
-color:#F4F4FD;
-opacity: 0;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.portfolio-item:hover .overlay{ opacity: 1;
-transform: translateY(0);}
+
 
 .div-portfolio{
     padding: 32px 16px;
