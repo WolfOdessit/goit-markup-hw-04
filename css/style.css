@@ -326,10 +326,10 @@ border: 1px solid #8e8f99;
   
 
 }
-.team-social-container:hover{
+.team-item:hover{
     background-color: #404BBF;
 }
-.team-social-container:focus{background-color: #404BBF;}
+.team-item:focus{background-color: #404BBF;}
 
 
 .team-social-list{
