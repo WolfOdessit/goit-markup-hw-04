@@ -347,8 +347,8 @@ border: 1px solid #8e8f99;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.team-link:hover,
-.team-link:focus {
+.team-link .team-icon:hover,
+.team-link .team-icon:focus {
     background-color: #404bbf;
 }
 
@@ -518,11 +518,12 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     align-items: center;
     justify-content: center;
+    
 
 }
-.footer-link:hover{
+.footer-link .team-icon:hover{
     background-color: #31d0aa;
 }
-.footer-link:focus{
+.footer-link .team-icon:focus{
     background-color: #31d0aa;
 }
